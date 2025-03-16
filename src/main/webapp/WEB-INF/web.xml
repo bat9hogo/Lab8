@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+
+  <display-name>Chat Application</display-name>
+
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+    <init-param>
+      <param-name>SESSION_TIMEOUT</param-name>
+      <param-value>600</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/chat/</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/chat/logout.do</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>NewMessageServlet</servlet-name>
+    <servlet-class>servlet.NewMessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewMessageServlet</servlet-name>
+    <url-pattern>/chat/send_message.do</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>MessageListServlet</servlet-name>
+    <servlet-class>servlet.MessageListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MessageListServlet</servlet-name>
+    <url-pattern>/chat/messages.do</url-pattern>
+  </servlet-mapping>
+
+<!--  <servlet>-->
+<!--    <servlet-name>RoomServlet</servlet-name>-->
+<!--    <servlet-class>RoomServlet</servlet-class>-->
+<!--  </servlet>-->
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>RoomServlet</servlet-name>-->
+<!--    <url-pattern>/chat/create_room.do</url-pattern>-->
+<!--  </servlet-mapping>-->
+</web-app>
